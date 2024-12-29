@@ -1,0 +1,12 @@
+{
+    "css.lint.unknownAtRules": "ignore",
+    "tailwindCSS.includeLanguages": {
+      "css": "css",
+      "postcss": "css",
+      "scss": "css"
+    },
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  }
+  
