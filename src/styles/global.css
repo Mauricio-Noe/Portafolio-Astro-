@@ -6,5 +6,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-500 font-sans;
+  @apply bg-gray-500 font-sans h-full;
+   
 }
+
