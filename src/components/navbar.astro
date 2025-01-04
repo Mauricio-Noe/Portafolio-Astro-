@@ -1,18 +1,20 @@
 ---
-
-
-
+const link =[
+ {href :"/Sobre", text:"Sobre mi"},
+ {href:"/Proyectos", text:"Proyectos"},
+ {href:"/Experencia", text:"Experencia"},
+]
 ---
 
-<section id="navbar" class="bg-gradient-to-r py-4 px-5 from-black via-black to grey-100 justify-between  text-white flex "> 
-    <h1>DEVELOPER</h1>
-    <form>
-      <ul class="flex text-white gap-3  ">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/sobre-mi">Sobre mí</a></li>
-        <li><a href="/proyectos">Proyectos</a></li>
-        <li><a href="/experiencia">Experiencia</a></li>
-      </ul>
-    </form>
+<section id="navbar" class="bg-gradient-to-r py-4 px-4 from-black via-black to-grey-100 text-white flex justify-between "> 
+  <a href="/">DEVELOPER </a>
+  <div class="">
+    <ul class="flex text-white gap-3  ">
+    {link.map((link) => 
+          ( <li><a href={link.href}>{link.text}</a> </li> )) } 
+             
+            </ul>
+          </div>  
+
   </section>
   
