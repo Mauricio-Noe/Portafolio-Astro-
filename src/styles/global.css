@@ -6,7 +6,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-500 font-sans h-full;
+  @apply bg-gray-800 font-sans h-full;
    
 }
-
+p, h1 ,h2{
+  @apply text-white py-2 px-2
+}
