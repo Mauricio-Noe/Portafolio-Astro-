@@ -1,0 +1,16 @@
+---
+//realiazar props con interface 
+interface Props {
+    title : string;
+    descriptions : string;
+    tecnologias : string;
+    
+}
+  const {title, descriptions, tecnologias }= Astro.props as Props;
+
+---
+<section id="Proyectos" class="w-52 h-60 bg-slate-700 px-5 py-5 i  text-white "  >
+<h1>{title} </h1>
+<h2> {tecnologias}</h2>
+<p> {descriptions}</p>
+</section>

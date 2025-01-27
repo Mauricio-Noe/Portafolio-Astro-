@@ -1,26 +1,47 @@
 ---
-const link =[
- {href :"/Sobre", text:"Sobre mi" },
- {href:"/Proyectos", text:"Proyectos"},
- {href:"/Experencia", text:"Experencia"},
-]
-
-const animations= ()=>{
-   
-}
-  
-
+const link = [
+  { href: "/Sobre", text: "Sobre mi" },
+  { href: "/Proyectos", text: "Proyectos" },
+  { href: "/Experiencia", text: "Experiencia" },
+];
 ---
 
-<section id="navbar" class="bg-gradient-to-r py-5 px-4 from-black  to-grey-100 text-white flex justify-between  "> 
-  <a href="/">DEVELOPER </a>
-  <div class=" ">
-    <ul class="flex text-white gap-3  ">
-    {link.map((link) => 
-          ( <li><a href={link.href}>{link.text}</a> </li> )) } 
-             
-            </ul>
-          </div>  
+<section id="navbar" class="bg-gradient-to-r py-5 px-4 from-black to-grey-100 text-white flex justify-between">
+  <a href="/">DEVELOPER</a>
+  <button id="btn-menu" class=" md:hidden ">Menu</button>
 
-  </section>
-  
+  <!-- Menú para pantallas grandes -->
+  <div class="hidden md:block">
+    <ul class="flex text-white gap-3">
+      {link.map((link) => (
+        <li>
+          <a class="transition-colors duration-300 hover:text-gray-500" href={link.href}>
+            {link.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- Menú para pantallas pequeñas -->
+  <div id="activenavbar" class="md:hidden hidden absolute top-20 right-0 left-auto z-10 bg-slate-600 p-3 gap-5  flex-col h-auto  transition-all  duration-300 backdrop-blur-3xl ">
+    <ul class="text-white gap-3 flex flex-col  ">
+      {link.map((link) => (
+        <li>
+          <a class="transition-colors duration-300 hover:text-gray-500" href={link.href}>
+            {link.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<script type="module" >
+  const menuoff = document.getElementById('btn-menu');
+  const menuon = document.getElementById('activenavbar');
+
+  menuoff.addEventListener('click', () => {
+    menuon.classList.toggle('hidden');
+  });
+</script>
