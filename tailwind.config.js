@@ -7,6 +7,9 @@ module.exports = {
 
         '-1': '-1', 
       },
+      backdropblur:{ 
+         lg:'50', 
+      },
     },
   },
   plugins: [],
