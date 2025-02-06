@@ -1,17 +1,26 @@
 ---
-
+const carrimg  = [
+    `/public/imagenes/ img-gith.jpg`,
+    `/public/imagenes/imghtml.jpg`,
+    `/public/imagenes/imgcss.jpg` ,
+    `/public/imagenes/imgjs.jpg` ,
+    `/public/imagenes/imgreact`,
+    `/public/imagenes/imgjson`
+ 
+]
 ---
 
 
 <article id="frame-hab"  >   
-    <div id="carrusel">
-     
-        <img id="img-2"  src="/public/imagenes/ img-gith.jpg" >  
-        <img id="img-3"  src="/public/imagenes/imghtml.jpg " >
-        <img id="img-4"  src="/public/imagenes/imgcss.jpg " >     
-        <img id="img-1"  src="/public/imagenes/imgjs.jpg " > 
-        <img id="img-5"  src="/public/imagenes/imgreact " >   
-        <img id="img-5"  src="/public/imagenes/imgjson " >   
+    <div id="carrusel" class="grid grid-cols-1 gap-4  ">
+
+
+     <img src={carrimg[0]} alt="" class="">
+     <img src={carrimg[1]} alt="" class="">
+     <img src={carrimg[2]} alt="" class="">
+     <img src={carrimg[3]} alt="" class="">
+     <img src={carrimg[4]} alt="" class="">
+     <img src={carrimg[5]} alt="" class="">
 
 
 
@@ -23,7 +32,7 @@
 
  <script>  
     const carrimg = [
-        
+
 
 
     ];
