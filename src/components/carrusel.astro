@@ -4,6 +4,8 @@ const CarrImg = [
     `/imagenes/imghtml.jpg`,
     `/imagenes/imgcss.jpg`,
     `/imagenes/imgjs.jpg`,
+    `/imagenes/imgjs.jpg`,
+    `/imagenes/imgjs.jpg`,
     `/imagenes/imgreact.jpg`,
     
     `/imagenes/imgjson.jpg`
@@ -19,8 +21,8 @@ const CarrImg = [
       {CarrImg.map((imagen, index) => (
         <div
           data-index={index}
-          class={`transition-transform duration-300 ${index === 2 ? 'scale-125' : 'scale-100'}`}>
-          <img src={imagen} alt={`img ${index + 1}`} class="w-full block" />
+          class={`transition-transform snap-x snap-mandatory scroll-smooth duration-300 ${index === 2 ? 'scale-125' : 'scale-100'}`}>
+          <img src={imagen} alt={`img ${index + 1}`} class="w-full block snap-center" />
         </div>
       ))}
     </div>
