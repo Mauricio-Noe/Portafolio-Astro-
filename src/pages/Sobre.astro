@@ -1,5 +1,6 @@
 ---
 import '..//styles/global.css';
+import Carrusel from '../components/carrusel.astro';
 import Proyectos from '../components/proyectos.astro';
 import Layout from '../layouts/Layout.astro'; 
 ---
@@ -27,8 +28,9 @@ import Layout from '../layouts/Layout.astro';
                            <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto ">  
                               Poseo actualmente experiencia con el uso de async/await, fetch, axios, callbacks, DOM, entre otros, donde de igual manera manejo header, Cors para la  garantizar la seguridad de estas mismas funciones
                             </p>
-                </article>
-       </div>
+                          </article>
+                          <Carrusel />
+                        </div>
 
        <section  class=" grid grid-cols-2  gap-4   ">  
          
@@ -58,33 +60,12 @@ import Layout from '../layouts/Layout.astro';
         </section>
        
        <section id="Experencia"> 
-
-
-        
-
-
-       </section>
+      </section>
        
-       
+
       </section>
  
-      <script>  
-      const CARIMG = [
-        '/imagenes/imgreact.jpg',
-        '/imagenes/imgreact.jpg',
-        '/imagenes/imgreact.jpg',
-        '/imagenes/imgreact.jpg',
-        '/imagenes/imgreact.jpg',
-      ];
-
-      function carrusel() {
-
-
-        
-         }
-
-
-      </script>
+      
            
     <script type="module" >
     document.addEventListener('DOMContentLoaded', () => {

@@ -1,47 +1,34 @@
 ---
-const carrimg  = [
-    `/public/imagenes/ img-gith.jpg`,
+const Carrimg =[
+    `/public/imagenes/img-gith.jpg`,
     `/public/imagenes/imghtml.jpg`,
     `/public/imagenes/imgcss.jpg` ,
     `/public/imagenes/imgjs.jpg` ,
-    `/public/imagenes/imgreact`,
-    `/public/imagenes/imgjson`
+    `/public/imagenes/imgreact.jpg`,
+    `/public/imagenes/imgjson.jpg`
  
 ]
 ---
 
 
-<article id="frame-hab"  >   
-    <div id="carrusel" class="grid grid-cols-1 gap-4  ">
-
-
-     <img src={carrimg[0]} alt="" class="">
-     <img src={carrimg[1]} alt="" class="">
-     <img src={carrimg[2]} alt="" class="">
-     <img src={carrimg[3]} alt="" class="">
-     <img src={carrimg[4]} alt="" class="">
-     <img src={carrimg[5]} alt="" class="">
-
-
-
-   </div>  
- 
- 
- </article>
-
-
- <script>  
-    const carrimg = [
-
-
-
-    ];
-
-    function carrusel() {
-
-
+  <article id="frame-hab" class="flex flex-col items-center justify-center bg-gray-100 rounded-lg shadow-lg   w-full">
+    <div id="carrusel" class="flex gap-4 w-full overflow-hidden">
+      <button id="btn-left" class="bg-white text-black">after</button>
       
-       }
+      {Carrimg.map((img, index) => (
+        <img src={img} alt={`img-${index}`} class="rounded-full h-20 w-max" />
+      ))}
+
+      <button id="btn-right" class="bg-white text-black">next</button>
+    </div>
+  </article>
+
+<script>
+  const btnLeft = document.getElementById('btn-left');
+  const btnRight = document.getElementById('btn-right');
+  const carrusel = document.getElementById('carrusel');
+
+  
 
 
-    </script>
+</script>
