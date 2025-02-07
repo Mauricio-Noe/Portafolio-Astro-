@@ -1,41 +1,82 @@
 ---
-/* array de img    */
-const Carrimg =[
-    `/imagenes/img-gith.jpg`,
+// array de imágenes
+const CarrImg = [
     `/imagenes/imghtml.jpg`,
-    `/imagenes/imgcss.jpg` ,
-    `/imagenes/imgjs.jpg` ,
+    `/imagenes/imgcss.jpg`,
+    `/imagenes/imgjs.jpg`,
     `/imagenes/imgreact.jpg`,
+    `/imagenes/imghtml.jpg`,
+    
     `/imagenes/imgjson.jpg`
- 
-]
+];
 ---
 
-       
-  <article id="frame-hab" class="flex flex-col items-center justify-center bg-gray-100 backdrop-blur-lg transform to-transparent rounded-lg shadow-lg   w-full">
-    <div id="carrusel" class="flex gap-4 w-full overflow-hidden">
-      <button id="btn-left" class="bg-white text-black">after</button>
-      
-      {Carrimg.map((img, index) => (
-        <img src={img} alt={`img-${index}`} class="rounded-full h-20 w-max border-green-400 border-x-4  " />
+<article id="frame-hab" class="flex flex-col items-center justify-center  backdrop-blur-lg transform to-transparent rounded-lg w-full">
+  <div id="carrusel" class="flex gap-4 w-full overflow-hidden">
+    <button id="btn-left" class="bg-white text-black">s</button>
+
+    <!-- Carrusel generado dinámicamente -->
+    <div id="img-container" class="flex gap-4 transition-transform duration-300">
+      {CarrImg.map((imagen, index) => (
+        <div
+          data-index={index}
+          class={`transition-transform duration-300 ${index === 2 ? 'scale-125' : 'scale-100'}`}>
+          <img src={imagen} alt={`img ${index + 1}`} class="w-full block" />
+        </div>
       ))}
-
-      <button id="btn-right" class="bg-white text-black">next</button>
     </div>
-  </article>
 
-<script>
-  /* conseguir el id y poner eventos */
-  const btnLeft = document.getElementById('btn-left');
-  const btnRight = document.getElementById('btn-right');
-  const carrusel = document.getElementById('carrusel');
-  /* colocamos logica de programacion donde el id del boton se desplace  y se coloque la siguiente img  , donde al mostrarse se mostrara el tiempo de experencia */
-    
-  { 
-  }
-   
+    <button id="btn-right" class="bg-white text-black">n</button>
+  </div>
+</article>
 
-  
+<script type="module">
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById("carrusel");
+    const imgContainer = document.getElementById("img-container");
+    const btnLeft = document.getElementById("btn-left");
+    const btnRight = document.getElementById("btn-right");
 
+    const items = document.querySelectorAll('[data-index]');
+    let activeIndex = 2;
 
+    // Función para actualizar el carrusel
+    function updateCarr() {
+      items.forEach(item => {
+        item.classList.remove('scale-125');
+        item.classList.add('scale-100');
+      });
+
+      const activeItem = document.querySelector(`[data-index="${activeIndex}"]`);
+      if (activeItem) {
+        activeItem.classList.remove('scale-100');
+        activeItem.classList.add('scale-125');
+      }
+
+      const itemWidth = items[0].offsetWidth + 16; // Ancho de las imágenes + espacio
+      const containerWidth = container.parentElement.offsetWidth;
+      const offset = (activeIndex * itemWidth) - (containerWidth / 2) + (itemWidth / 2);
+
+      imgContainer.style.transform = `translateX(-${offset}px)`;
+    }
+
+    // Evento para el botón "prev"
+    btnLeft.addEventListener('click', () => {
+      if (activeIndex > 0) {
+        activeIndex--;
+        updateCarr();
+      }
+    });
+
+    // Evento para el botón "next"
+    btnRight.addEventListener('click', () => {
+      if (activeIndex < items.length - 1) {
+        activeIndex++;
+        updateCarr();
+      }
+    });
+
+    // Inicializar el carrusel
+    updateCarr();
+  });
 </script>
