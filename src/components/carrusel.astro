@@ -1,4 +1,5 @@
 ---
+/* array de img    */
 const Carrimg =[
     `/imagenes/img-gith.jpg`,
     `/imagenes/imghtml.jpg`,
@@ -10,13 +11,13 @@ const Carrimg =[
 ]
 ---
 
-
-  <article id="frame-hab" class="flex flex-col items-center justify-center bg-gray-100 rounded-lg shadow-lg   w-full">
+       
+  <article id="frame-hab" class="flex flex-col items-center justify-center bg-gray-100 backdrop-blur-lg transform to-transparent rounded-lg shadow-lg   w-full">
     <div id="carrusel" class="flex gap-4 w-full overflow-hidden">
       <button id="btn-left" class="bg-white text-black">after</button>
       
       {Carrimg.map((img, index) => (
-        <img src={img} alt={`img-${index}`} class="rounded-full h-20 w-max" />
+        <img src={img} alt={`img-${index}`} class="rounded-full h-20 w-max border-green-400 border-x-4  " />
       ))}
 
       <button id="btn-right" class="bg-white text-black">next</button>
@@ -24,9 +25,15 @@ const Carrimg =[
   </article>
 
 <script>
+  /* conseguir el id y poner eventos */
   const btnLeft = document.getElementById('btn-left');
   const btnRight = document.getElementById('btn-right');
   const carrusel = document.getElementById('carrusel');
+  /* colocamos logica de programacion donde el id del boton se desplace  y se coloque la siguiente img  , donde al mostrarse se mostrara el tiempo de experencia */
+    
+  { 
+  }
+   
 
   
 
