@@ -5,7 +5,6 @@ const CarrImg = [
     `/imagenes/imgcss.jpg`,
     `/imagenes/imgjs.jpg`,
     `/imagenes/imgreact.jpg`,
-    `/imagenes/imghtml.jpg`,
     
     `/imagenes/imgjson.jpg`
 ];
@@ -44,13 +43,13 @@ const CarrImg = [
     function updateCarr() {
       items.forEach(item => {
         item.classList.remove('scale-125');
-        item.classList.add('scale-100');
+        item.classList.add('scale-160 ');
       });
 
       const activeItem = document.querySelector(`[data-index="${activeIndex}"]`);
       if (activeItem) {
         activeItem.classList.remove('scale-100');
-        activeItem.classList.add('scale-125');
+        activeItem.classList.add('scale-185');
       }
 
       const itemWidth = items[0].offsetWidth + 16; // Ancho de las imágenes + espacio
