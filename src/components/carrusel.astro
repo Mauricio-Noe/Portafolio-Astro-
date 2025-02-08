@@ -1,53 +1,58 @@
 ---
 // array de imágenes
-const CarrImg = [
+const CarrImg =[ 
     `/imagenes/imghtml.jpg`,
     `/imagenes/imgcss.jpg`,
     `/imagenes/imgjs.jpg`,
-    `/imagenes/imgjs.jpg`,
-    `/imagenes/imgjs.jpg`,
     `/imagenes/imgreact.jpg`,
-    
-    `/imagenes/imgjson.jpg`
+    `/imagenes/imggithub.jpg`,
+    `/imagenes/imgjson.jpg`,
+     
+   
 ];
 ---
 
 <article id="frame-hab" class="flex flex-col items-center justify-center  backdrop-blur-lg transform to-transparent rounded-lg w-full">
   <div id="carrusel" class="flex gap-4 w-full overflow-hidden">
-    <button id="btn-left" class="bg-white text-black">s</button>
 
+    <button id="btn-left" class= " transition-transform translate-x-3 min-w-min  ">  A </button>
     <!-- Carrusel generado dinámicamente -->
     <div id="img-container" class="flex gap-4 transition-transform duration-300">
       {CarrImg.map((imagen, index) => (
         <div
           data-index={index}
-          class={`transition-transform snap-x snap-mandatory scroll-smooth duration-300 ${index === 2 ? 'scale-125' : 'scale-100'}`}>
+          class={`transition-transform snap-x snap-mandatory duration-300 ${index === 2 ? 'scale-125' : 'scale-180'}`}>
           <img src={imagen} alt={`img ${index + 1}`} class="w-full block snap-center" />
         </div>
       ))}
     </div>
 
-    <button id="btn-right" class="bg-white text-black">n</button>
+    <button id="btn-right" class="bg-white text-black">  </button>
   </div>
 </article>
 
 <script type="module">
+  /* preparamos para que el dom este cargado */
   document.addEventListener('DOMContentLoaded', () => {
+
+    /* Obtenemos los elementos del carrusel */
     const container = document.getElementById("carrusel");
     const imgContainer = document.getElementById("img-container");
     const btnLeft = document.getElementById("btn-left");
     const btnRight = document.getElementById("btn-right");
-
     const items = document.querySelectorAll('[data-index]');
+     // colocamos desde donde se aplica el estilo en este caso el date
     let activeIndex = 2;
 
     // Función para actualizar el carrusel
     function updateCarr() {
+         
+ //Recorremos los items y les aplicamos la clase correspondientes 
       items.forEach(item => {
         item.classList.remove('scale-125');
-        item.classList.add('scale-160 ');
+        item.classList.add('scale-100 ');
       });
-
+          // Obtenemos el item activo 
       const activeItem = document.querySelector(`[data-index="${activeIndex}"]`);
       if (activeItem) {
         activeItem.classList.remove('scale-100');
@@ -77,7 +82,6 @@ const CarrImg = [
       }
     });
 
-    // Inicializar el carrusel
-    updateCarr();
+  
   });
 </script>
