@@ -5,9 +5,10 @@ import Proyectos from '../components/proyectos.astro';
 import Layout from '../layouts/Layout.astro'; 
 ---
 <Layout>
-  
-  <div class="justify-center items-center text-center pt-8  ">
-    <h1 class="text-2xl font-extrabold   bg-gradient-to-r from-gray-700 to-slate-100 bg-clip-text text-transparent ">Mauricio Noe Guzman Martinez</h1>
+
+    
+    <div class="justify-center items-center text-center pt-8  ">
+      <h1 class="text-2xl font-extrabold   bg-gradient-to-r from-gray-700 to-slate-100 bg-clip-text text-transparent ">Mauricio Noe Guzman Martinez</h1>
     <h2 class="text-xl font-bold  underline  decoration-slate-400 "> Desarrollador de software</h2>
   </div>     
   <section id="container-principal"  class=" justify-cente pt-7  "   >
@@ -23,35 +24,38 @@ import Layout from '../layouts/Layout.astro';
             </div>
           
             <button id='btn-info-dev' class=" md:hidden bg-green-400  border-green-950  mx-36 rounded  shadow-slate-900   hover:-translate-y-6 transition-transform duration-75  animate-pulse "  > Sobre mi!! </button> 
-      <article class="md:hidden hidden pb-4 active: text-1xl font-bold text-justify pt-5" id="info-dev">
-        <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto pt-15"> Soy un Desarrollador de software especializado en sitios web y app moviles donde tengo un claro conocimiento en lenguajes de programacion, frameworks, base de datos, como de igualmanera en metodologias <i class="font-bold">SOLID</i> y <i class="font-bold">SCRUM</i>. </p>
-        <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto">  
-          Poseo actualmente experiencia con el uso de async/await, fetch, axios, callbacks, DOM, entre otros, donde de igual manera manejo header, Cors para la garantizar la seguridad de estas mismas funciones
-        </p>
-        <div class="flex items-center justify-center pt-5 pb-16"> 
-          <Carrusel /> 
-        </div>
-      </article>
-
-      <section class="bg-indigo-400 pt-8 mt-28  " id="Proyectos">  
-        <div class="grid grid-cols-2 gap-4"> 
-          <Proyectos  
-        title='Baroo.on' 
-        descriptions='Lorem eeee'
-        tecnologias='cdd html javascript'
-          /> 
-          <Proyectos  
-        title='Baroo.on' 
-        descriptions='Lorem eeee'
-        tecnologias='cdd html javascript'
-          /> 
-          <Proyectos  
-        title='Baroo.on' 
-        descriptions='Lorem eeee'
-        tecnologias='cdd html javascript'
-          /> 
-        </div>
-      </section>
+            <article class="md:hidden hidden pb-4 active: text-1xl font-bold text-justify pt-5" id="info-dev">
+              <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto pt-15"> Soy un Desarrollador de software especializado en sitios web y app moviles donde tengo un claro conocimiento en lenguajes de programacion, frameworks, base de datos, como de igualmanera en metodologias <i class="font-bold">SOLID</i> y <i class="font-bold">SCRUM</i>. </p>
+              <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto">  
+                Poseo actualmente experiencia con el uso de async/await, fetch, axios, callbacks, DOM, entre otros, donde de igual manera manejo header, Cors para la garantizar la seguridad de estas mismas funciones
+              </p>
+              <div class="flex items-center justify-center pt-5 pb-16"> 
+                <Carrusel /> 
+              </div>
+            </article>
+         
+      <section class="bg-indigo-400   pt-8 mt-28 rounded-t-3xl m-4 min-h-screen shadow-slate-600  
+      transition-transform  duration-700    " id="Proyectos">  
+       
+      <div class="grid grid-cols-2 gap-4"> 
+       <Proyectos  
+       title='Baroo.on' 
+       descriptions='Lorem eeee'
+       tecnologias='cdd html javascript'
+       /> 
+       <Proyectos  
+       title='Baroo.on' 
+       descriptions='Lorem eeee'
+       tecnologias='cdd html javascript'
+       /> 
+       <Proyectos  
+       title='Baroo.on' 
+       descriptions='Lorem eeee'
+       tecnologias='cdd html javascript'
+       /> 
+      </div>
+      
+    </section>
        
       <section id="Experencia"> 
       </section>
