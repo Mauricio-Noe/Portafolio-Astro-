@@ -9,8 +9,11 @@ interface Props {
   const {title, descriptions, tecnologias }= Astro.props as Props;
 
 ---
-<section id="Proyectos" class=" h-60 bg-slate-700 px-5 py-5 i  text-white md: w-min    "  >
-<h1>{title} </h1>
-<h2> {tecnologias}</h2>
-<p> {descriptions}</p>
-</section>
+<div id="container-proyect" class="flex flex-col items-center justify-center  bg-slate-900">
+  <section id="Proyectos" class=" h-60 bg-slate-700 px-5 py-5 i  text-white md: w-min    "  >
+  <h1>{title} </h1>
+  <h2> {tecnologias}</h2>
+  <p> {descriptions}</p>
+  </section>
+</div>
+

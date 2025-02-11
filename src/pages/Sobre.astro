@@ -13,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
   <section id="container-principal"  class=" justify-cente pt-7  "   >
     <section class="grid grid-cols-1 gap-4  md:grid-cols-2  " id=" container-secundario " > 
 
-      <div id="precentacion" class=" flex items-center justify-center pb-5 "   >
+      <div id="precentacion" class=" flex items-center justify-center m-7 "   >
         
         <img src="/imagenes/imgreact.jpg  " alt=" img-perfil" class=" rounded-full  h-60 mx-auto    " >
             <!-- 
@@ -23,46 +23,37 @@ import Layout from '../layouts/Layout.astro';
             </div>
           
             <button id='btn-info-dev' class=" md:hidden bg-green-400  border-green-950  mx-36 rounded  shadow-slate-900   hover:-translate-y-6 transition-transform duration-75  animate-pulse "  > Sobre mi!! </button> 
-      <article class="md:hidden hidden text-1xl font-bold text-justify  pt-5 " id="info-dev" >
-                           <p class="text-1xl decoration-from-font px-4  text-ellipsis overflow-auto pt-15 "> Soy un Desarrollador de software especializado en sitios web y app moviles donde  tengo un claro conocimiento en lenguajes de programacion, frameworks, base de datos , como de igualmanera en metodologias <i class="font-bold ">SOLID </i> y <i class="font-bold" > SCRUM</i>. </p> 
-                           <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto ">  
-                              Poseo actualmente experiencia con el uso de async/await, fetch, axios, callbacks, DOM, entre otros, donde de igual manera manejo header, Cors para la  garantizar la seguridad de estas mismas funciones
-                            </p>
-                            <div class="flex items-center justify-center pt-5 bg "> 
-                              <Carrusel /> 
+      <article class="md:hidden hidden pb-4 active: text-1xl font-bold text-justify pt-5" id="info-dev">
+        <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto pt-15"> Soy un Desarrollador de software especializado en sitios web y app moviles donde tengo un claro conocimiento en lenguajes de programacion, frameworks, base de datos, como de igualmanera en metodologias <i class="font-bold">SOLID</i> y <i class="font-bold">SCRUM</i>. </p>
+        <p class="text-1xl decoration-from-font px-4 text-ellipsis overflow-auto">  
+          Poseo actualmente experiencia con el uso de async/await, fetch, axios, callbacks, DOM, entre otros, donde de igual manera manejo header, Cors para la garantizar la seguridad de estas mismas funciones
+        </p>
+        <div class="flex items-center justify-center pt-5 pb-16"> 
+          <Carrusel /> 
+        </div>
+      </article>
 
-                            </div>
-                          </article>
-                        </div>
-
-       <section  class=" grid grid-cols-2  gap-4   ">  
-         
-         <Proyectos  
-         
-         title=' Baroo.on' 
-             descriptions='Lorem eeee'
-             tecnologias='cdd html javascript'
-             
+      <section class="bg-indigo-400 pt-8 mt-28  " id="Proyectos">  
+        <div class="grid grid-cols-2 gap-4"> 
+          <Proyectos  
+        title='Baroo.on' 
+        descriptions='Lorem eeee'
+        tecnologias='cdd html javascript'
           /> 
           <Proyectos  
-           
-          title=' Baroo.on' 
-          descriptions='Lorem eeee'
-          tecnologias='cdd html javascript'
-          
+        title='Baroo.on' 
+        descriptions='Lorem eeee'
+        tecnologias='cdd html javascript'
           /> 
-          
-          
           <Proyectos  
-          
-          title=' Baroo.on' 
-          descriptions='Lorem eeee'
-          tecnologias='cdd html javascript'
-          
+        title='Baroo.on' 
+        descriptions='Lorem eeee'
+        tecnologias='cdd html javascript'
           /> 
-        </section>
+        </div>
+      </section>
        
-       <section id="Experencia"> 
+      <section id="Experencia"> 
       </section>
        
 
